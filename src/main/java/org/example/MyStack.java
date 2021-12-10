@@ -6,6 +6,8 @@ import io.pulumi.core.Output;
 import io.pulumi.core.internal.annotations.OutputExport;
 import io.pulumi.kubernetes.core.v1.Namespace;
 import io.pulumi.kubernetes.core.v1.Secret;
+import io.pulumi.kubernetes.core.v1.inputs.NamespaceArgs;
+import io.pulumi.kubernetes.core.v1.inputs.SecretArgs;
 import io.pulumi.kubernetes.meta.v1.inputs.ObjectMetaArgs;
 import io.pulumi.kubernetes.meta.v1.outputs.ObjectMeta;
 
@@ -30,7 +32,7 @@ public class MyStack extends Stack {
         var config = Config.of("example-jvm");
         var name = config.require("name");
 
-        var ns = new Namespace(name, Namespace.Args.builder()
+        var ns = new Namespace(name, NamespaceArgs.builder()
                 .setMetadata(
                         ObjectMetaArgs.builder()
                                 .setName(name)
@@ -46,7 +48,7 @@ public class MyStack extends Stack {
                 ns.getMetadata().applyOptional(ObjectMeta::getName)
         ).applyValue(ss -> String.join("/", ss));
 
-        var secret = new Secret("my-secret", Secret.Args.builder()
+        var secret = new Secret("my-secret", SecretArgs.builder()
                 .setMetadata(
                         ObjectMetaArgs.builder()
                                 .setNamespace(

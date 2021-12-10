@@ -9,7 +9,7 @@ repositories {
 
 dependencies {
     implementation("io.pulumi:pulumi:3.6.0+")
-    implementation("io.pulumi:kubernetes:3.5.1+")
+    implementation("io.pulumi:kubernetes:3.6.0+")
     implementation("com.google.code.findbugs:jsr305:3.0.2")
 }
 

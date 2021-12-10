@@ -12,7 +12,7 @@ public class Utilities {
     }
 
     static {
-        var resourceName = "org/example/k8s/version.txt";
+        var resourceName = "io/pulumi/kubernetes/version.txt";
         var versionFile = Utilities.class.getClassLoader().getResourceAsStream(resourceName);
         if (versionFile == null) {
             throw new IllegalStateException(

@@ -131,7 +131,7 @@ public final class Namespace extends KubernetesResource {
 
             private Builder(Args args) {
                 Objects.requireNonNull(args);
-                this.apiVersion = Objects.requireNonNull(args.kind);
+                this.apiVersion = Objects.requireNonNull(args.apiVersion);
                 this.kind = Objects.requireNonNull(args.kind);
                 this.metadata = Objects.requireNonNull(args.metadata);
             }
