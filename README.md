@@ -1,6 +1,6 @@
 # Pulumi Java SDK and Provider Usage Example
 
-This example requires experimental java sdk and kubernetes provider package.
+This example requires [experimental java sdk](https://github.com/VirtusLab/pulumi/tree/jvm-lang-codegen-rewrite) and [kubernetes provider package](https://github.com/VirtusLab/pulumi-kubernetes/tree/jvm-v3.5.1).
 
 To start `kind` cluster:
 ```bash
