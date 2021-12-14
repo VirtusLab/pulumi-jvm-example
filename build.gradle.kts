@@ -10,12 +10,12 @@ repositories {
 dependencies {
     implementation("io.pulumi:pulumi:3.6.0+")
     implementation("io.pulumi:kubernetes:3.6.0+")
+    implementation("pl.pawelprazak.pulumi:kind:0.0.1+")
     implementation("com.google.code.findbugs:jsr305:3.0.2")
 }
 
 application {
     mainClass.set("org.example.Main")
-    applicationDefaultJvmArgs = listOf("-XX:MaxJavaStackTraceDepth=1073741823")
 }
 
 run {
