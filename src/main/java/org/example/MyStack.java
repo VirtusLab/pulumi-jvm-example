@@ -40,7 +40,7 @@ public class MyStack extends Stack {
     public final Output<Map<String, String>> theSecretData;
 
     public MyStack() {
-        var config = Config.of("example-jvm");
+        var config = Config.of("example-java");
         var name = config.require("name");
 
         var cluster = new Cluster(name, ClusterArgs.builder()
